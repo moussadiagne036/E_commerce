@@ -4,10 +4,12 @@ import { RouterOutlet } from "@angular/router";
     selector: "app-main-layaout",
     imports : [RouterOutlet],
     template :`
-    <app-header></app-header>
-    <router-oulet/>
+    <app-header/>
+    <router-outlet/>
+    <app-footer/>
 
-    `
+
+    `,
     
  
 })
