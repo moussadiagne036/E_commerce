@@ -13,14 +13,19 @@ export const routes: Routes = [
         loadComponent: () => import ('./pages/register/register').then(m => m.register),
     },
     {
-         path:'profile',
-        loadComponent: () => import ('./pages/profile/profile').then(m => m.profile),
+        path:``,
+        loadComponent: () => import ('./main-layout').then(m => m.MainLayout),  
+        children : [
+            
+            {   path:'products',
+                loadComponent: () => import ('./pages/products/products').then(m => m.products),
+            },
+            {   path:'profile',
+                loadComponent: () => import ('./pages/profile/profile').then(m => m.profile),
+            },
+            {   path:'cart',
+                loadComponent: () => import ('./pages/cart/cart').then(m => m.cart),
+            }
+        ]
     },
-
-     {
-         path:'cart',
-        loadComponent: () => import ('./pages/cart/cart').then(m => m.cart),
-    },
-    
-]
-        
+];
