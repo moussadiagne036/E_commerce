@@ -14,7 +14,8 @@ export const routes: Routes = [
     },
     {
         path:``,
-        loadComponent: () => import ('./main-layout').then(m => m.MainLayout),  
+        loadComponent: () => import ('./main-layout').then(m => m.MainLayout),   
+         canActivate: [], 
         children : [
             
             {   path:'products',
