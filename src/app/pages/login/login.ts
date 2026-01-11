@@ -2,53 +2,8 @@ import { Component } from "@angular/core";
 
 @Component({
     selector:"app-login",
-     template: ` <div class="w-full max-w-md p-8 bg-white rounded-2xl shadow-xl">
-    <h1 class="text-2xl font-bold text-center text-slate-900 mb-8">Sign In</h1>
+    template:'',
 
-    <form (ngSubmit)="onSubmit($event)" class="space-y-6">
-      <div>
-        <label for="username" class="block text-sm font-medium text-slate-700 mb-2">
-          Username
-        </label>
-        <input
-          id="username"
-          type="text"
-          [field]="loginForm.username"
-          autocomplete="username"
-          class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-900 focus:border-transparent outline-none transition-shadow"
-          placeholder="Enter your username"
-        />
-        <app-form-errors [control]="loginForm.username()"></app-form-errors>
-      </div>
-
-      <div>
-        <label for="password" class="block text-sm font-medium text-slate-700 mb-2">
-          Password
-        </label>
-        <input
-          id="password"
-          type="password"
-          [field]="loginForm.password"
-          autocomplete="current-password"
-          class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-900 focus:border-transparent outline-none transition-shadow"
-          placeholder="Enter your password"
-        />
-        <app-form-errors [control]="loginForm.password()"></app-form-errors>
-      </div>
-
-      <button size="lg" appButton type="submit" [disabled]="loginForm().invalid() || isLoading()" class="w-full">
-        {{ isLoading() ? 'Signing In...' : 'Sign In' }}
-      </button>
-
-      <p class="text-sm text-center text-slate-500 mt-4">
-        Don't have an account?
-        <a routerLink="/register" class="text-slate-500 font-medium underline"> Register </a>
-      </p>
-    </form>
-  </div>`,
-  host: {
-    class: 'min-h-screen flex items-center justify-center bg-slate-100 p-4',
-  },
 })
 export class login{
     
